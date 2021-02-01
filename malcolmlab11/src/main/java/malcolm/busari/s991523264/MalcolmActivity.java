@@ -14,6 +14,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,8 +34,16 @@ public class MalcolmActivity extends AppCompatActivity {
 
     public void callIntent (View view){
         Intent intent = null;
+        EditText editText;
 
         switch(view.getId()) {
+            case R.id.btnSend:
+                editText = (EditText)findViewById(R.id.userInput);
+                String str = editText.getText().toString();
+                intent = new Intent(getApplicationContext(), BusariActivity.class);
+                intent.putExtra("sendInput", str);
+                startActivity(intent);
+                break;
             case R.id.btnToast:
                 Context context = getApplicationContext();
                 CharSequence text = "Malcolm Busari. Sheridan College";
