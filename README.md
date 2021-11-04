@@ -1,2 +1,3 @@
 # Malcolm Busari
-##Assignment 1 demonstrates the use of Intent, invoke a browser, and launch of a second activity.
+##Description
+Android Application that demonstrates the use of Intent, invokes a browser, and launches a second activity.
